@@ -1,0 +1,43 @@
+-- creating database
+-- create database school;
+-- use school;
+
+-- creating table
+create table student(
+    student_id int primary key auto_increment,
+    student_name varchar(50),
+    student_age int,
+    student_class int
+);
+
+-- insert data into table
+insert into student(student_id,student_name,student_age,student_class) values
+ (1,'Ram',15,7),
+ (2,'Shyam',14,6),
+ (3,'Bikash',16,6),
+ (4,'Hari',17,8),
+ (5,'Kishore',18,9);
+
+-- showing all data into the table(Read)
+-- select * from student;
+
+-- only shows student name & there class
+select student_name, student_class from student;
+
+-- showing records with the where condition
+select * from student where student_age > 15;
+
+-- sorting 
+select * from student order by student_age desc;
+
+-- UPDATE Quarye 
+update student set student_age = 20 where student_id = 5;
+
+select * from student;
+
+update student set student_name = 'Kishor' where student_id = 5;
+-- select * from student;
+
+-- DELETE QUERY
+delete from student where student_id = 2;
+select * from student;
